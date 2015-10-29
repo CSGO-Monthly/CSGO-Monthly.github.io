@@ -912,9 +912,25 @@ dt {
 	font-style:oblique;
 }
 
+.anchor:before {
+	content: '';
+	display:
+	block;
+	position:
+	relative;
+	width: 0;
+	height: 5em;
+	margin-top: -5em
+	}
+
+.navScrollbar::-webkit-scrollbar {
+    width: 12px;
+	background-color: initial;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
-	/*background-color: rgba(38,38,37, 0.8);*/
+	background-color: rgba(38,38,37, 0.8);
 }
 
 ::-webkit-scrollbar-track:horizontal {
