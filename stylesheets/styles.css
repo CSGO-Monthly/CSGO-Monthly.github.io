@@ -68,6 +68,119 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Colours */
+
+.colour_red{
+	color:#FF0000;
+}
+
+.colour_blue{
+	color:#0000FF;
+}
+
+.colour_green{
+	color:#00FF00;
+}
+
+.colour_yellow{
+	color:#FFFF00;
+}
+
+.colour_orange, li{
+	color:#FF7F00;
+}
+
+.colour_pink{
+	color:#FF00FF;
+}
+
+.colour_purple{
+	color:#4000FF;
+}
+
+.colour_indigo{
+	color:#4B0082;
+}
+
+.colour_violet{
+	color:#8F00FF;
+}
+
+.colour_black{
+	color:#000000;
+}
+
+.colour_white{
+	color:#FFFFFF;	
+}
+
+.colour_gray{
+	color:#666565;	
+}
+
+/* Floats */
+.float_left{
+	float:left;
+	margin:0 1em 1em 0; /*Top, Right, Bot, Left*/
+}
+
+.float_right{
+	float:right;
+	margin:0 0 1em 1em; /*Top, Right, Bot, Left*/
+}
+
+.clear_left{
+	clear:left;	
+}
+
+/* Fonts */
+
+.text_left{
+	text-align:left;	
+}
+
+.text_center{
+	text-align:center;	
+}
+
+.text_right{
+	text-align:right;	
+}
+
+/*Carousel silder*/
+.stepcarousel{
+	position: relative; /*leave this value alone*/
+	border: 0;
+	overflow: scroll; /*leave this value alone*/
+	width: 640px; /*Width of Carousel Viewer itself*/
+	height: 360px; /*Height should enough to fit largest content's height*/
+	margin-top:1em;
+}
+
+.stepcarousel .belt{
+	position: absolute; /*leave this value alone*/
+	left: 0;
+	top: 0;
+	width: 640px;
+}
+
+.stepcarousel .panel{
+	float: left; /*leave this value alone*/
+	overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+	margin: 0; /*margin around each panel*/
+	width: 640px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+	
+}
+
+/* Display */
+.display_inline{
+display:inline;	
+}
+
+.display_inline-block{
+display:inline-block;
+}
+
 /* normalize.css 2012-02-07T12:37 UTC - https://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -712,7 +825,6 @@ dt {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 10px;
-  background: blue;
   margin: 6px auto;
 }
 #header nav li {
@@ -727,13 +839,16 @@ dt {
 }
 #header nav li a {
   color: white;
-  border: 1px solid #5d910b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93bd20), color-stop(100%, #659e10));
-  background: -webkit-linear-gradient(#93bd20, #659e10);
-  background: -moz-linear-gradient(#93bd20, #659e10);
-  background: -o-linear-gradient(#93bd20, #659e10);
-  background: -ms-linear-gradient(#93bd20, #659e10);
-  background: linear-gradient(#93bd20, #659e10);
+  border: 1px solid #45484d;
+  background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	zoom: 1;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
@@ -753,20 +868,22 @@ dt {
   text-align: center;
 }
 #header nav li a:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527f0e));
-  background: -webkit-linear-gradient(#749619, #527f0e);
-  background: -moz-linear-gradient(#749619, #527f0e);
-  background: -o-linear-gradient(#749619, #527f0e);
-  background: -ms-linear-gradient(#749619, #527f0e);
-  background: linear-gradient(#749619, #527f0e);
-  background-color: #659e10;
-  border: 1px solid #527f0e;
+  border: 1px solid #45484d;
+  background: #FFFFFF; /* Old browsers */
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #45484d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#45484d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#45484d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FFFFFF 0%,#45484d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FFFFFF 0%,#45484d 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #FFFFFF 0%,#45484d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+	zoom: 1;
   -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
-#header nav li.fork {
+/*#header nav li.fork {
   float: left;
   margin-left: 0px;
 }
@@ -778,6 +895,48 @@ dt {
   float: right;
   margin-right: 10px;
   font-size: 11px;
+}*/
+
+#nav_list {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    font-size: 0;
+    overflow: auto; 
+  }
+
+.nav_element {
+	padding:8px;
+    display: inline-block;
+    font-size: 16px;
+	font-style:oblique;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+	/*background-color: rgba(38,38,37, 0.8);*/
+}
+
+::-webkit-scrollbar-track:horizontal {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(51,51,51,1);*/
+    border-radius: none;
+	visibility:hidden;
+	background-color:transparent;
+}
+
+::-webkit-scrollbar-track:vertical {
+    background: #262625;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(102,102,102,1); 
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(102,102,102,1);
 }
 
 section {
